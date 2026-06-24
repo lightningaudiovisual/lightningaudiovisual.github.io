@@ -1,0 +1,85 @@
+<html>
+<link rel="stylesheet" id="the_stylesheet" href="main.css">
+<title>Lightning Audio Visual</title>
+<body>
+	<video id="background_video" src="background_video.mp4" autoplay muted loop style="position: fixed; top: 0px; left: 0px; z-index: -5"></video>
+	<iframe src="top.html"></iframe>
+	<div id="div_title">
+		<h2 class="h2_w_image" style="background-image: url('images/chamsys.png')">Welcome to Lightning Audio Visual</h2>
+	</div>
+	<div id="div_fast">
+		<h2>Fast, efficient, reliable</h2>
+		<p>We understand that technical production should be integrated seemelssly with your ideas.  This is why we provide a level of service which is accessible for questions and queries, with the technical know-how for your needs.</p>
+	</div>
+	<div id="div_testimonials">
+		<h2>What do our customers say?</h2>
+		<p>Testimonials</p>
+		<h2 style="color: #8658d1; text-align: center"><i>"Wow that looks so cool!"</i></h2>
+		<p style="text-align: right">- Karin Adcock piano school</p>
+	</div>
+	<div id="div_safety">
+		<h2>Safety is paramount</h2>
+		<p>Safety is at the forefront of everything that we do.  This is why we always strive to implement our training at every point in our process.</p>
+		<button><a class="normal_a" href="https://lightningav.co.uk">Contact us</a></button>
+	</div>
+	<div id="div_seemless">
+		<h2>Seemless integration</h2>
+		<p>Our crew members are experienced in their fields and excellent at what they do.<br><br>They aim to be as accessible as possible for your questions and ideas, so let them know!</p>
+	</div>
+	<div></div>
+	<script>
+		var div_title_opacity = 0;
+		var div_fast_opacity = 0;
+		var div_why_opacity = 0;
+		var div_testimonials_opacity = 0;
+		var div_safety_opacity = 0;
+		var div_seemless_opacity = 0;
+		document.getElementById("div_title").style.opacity = "0%";
+		document.getElementById("div_fast").style.opacity = "0%";
+		document.getElementById("div_testimonials").style.opacity = "0%";
+		document.getElementById("div_safety").style.opacity = "0%";
+		document.getElementById("div_seemless").style.opacity = "0%";
+		function load_transition() {
+			if (div_title_opacity < 100) {
+				div_title_opacity = div_title_opacity + 1;
+				document.getElementById("div_title").style.opacity = String(div_title_opacity) + "%";
+			};
+			if (div_title_opacity >= 100) {
+				if (div_fast_opacity < 100) {
+					div_fast_opacity = div_fast_opacity + 1;
+					document.getElementById("div_fast").style.opacity = String(div_fast_opacity) + "%";
+				};
+			};
+			if (div_fast_opacity >= 100) {
+				if (div_testimonials_opacity < 100) {
+					div_testimonials_opacity = div_testimonials_opacity + 1;
+					document.getElementById("div_testimonials").style.opacity = String(div_testimonials_opacity) + "%";
+				};
+			};
+			if (div_testimonials_opacity >= 100) {
+				if (div_safety_opacity < 100) {
+					div_safety_opacity = div_safety_opacity + 1;
+					document.getElementById("div_safety").style.opacity = String(div_safety_opacity) + "%";
+				};
+			};
+			if (div_safety_opacity >= 100) {
+				if (div_seemless_opacity < 100) {
+					div_seemless_opacity = div_seemless_opacity + 1;
+					document.getElementById("div_seemless").style.opacity = String(div_seemless_opacity) + "%";
+				};
+			};
+			setTimeout(load_transition, 10);
+		};
+		load_transition()
+	</script>
+	<script>
+		if (window.innerWidth < window.innerHeight) {
+			document.getElementById("the_stylesheet").href = "vertical.css";
+			document.getElementById("background_video").height = "100%";
+		}
+	</script>
+</body>
+<footer>
+	<iframe src="bottom.html"></iframe>
+</footer>
+</html>

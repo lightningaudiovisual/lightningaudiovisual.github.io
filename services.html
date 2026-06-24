@@ -1,0 +1,86 @@
+<html>
+<link rel="stylesheet" id="the_stylesheet" href="main.css">
+<title>Lightning Audio Visual</title>
+<body>
+	<video id="background_video" src="background_video.mp4" autoplay muted loop style="position: fixed; top: 0px; left: 0px; z-index: -5"></video>
+	<iframe src="top.html"></iframe>
+	<div id="div_title">
+		<h2>Our services</h2>
+		<p>Got a question?</p>
+		<button><a class="normal_a" href="https://lightingav.co.uk/contact">Contact us</a></button>
+	</div>
+	<div id="div_sound">
+		<h2 class="h2_w_image" style="background-image: url('images/sound.png')">Sound</h2>
+		<p>We provide PA systems for most events.  These are tailored to your event depending on the scenario.</p>
+	</div>
+	<div id="div_lighting">
+		<h2 class="h2_w_image" style="background-image: url('images/chamsys.png')">Lighting</h2>
+		<p>Lighting can always add that extra edge to your show, which is why we aim to make our's as best value for money as possible.  We can provide a range of lighting from washes of light to patterns on the stage.</p>
+	</div>
+	<div id="div_photography">
+		<h2 class="h2_w_image" style="background-image: url('images/photographer.png')">Photography</h2>
+		<p>We include photography in all of our event quotes as standard.<br><br>We can also record videos for later viewing or possible sales.  We do not take a commision from this.<br><br>We can also provide services for broadcasting a stream to platforms such as YouTube.<br><br>Both photos and videos can be available raw, edited or both.</p>
+	</div>
+	<div id="div_pre_show">
+		<h2 class="h2_w_image" style="background-image: url('images/timecode.png')">Pre-show setup</h2>
+		<p>Our services extend even before the show has started.</p>
+		<p>Lighting timecode<br><br>This is where the visuals on the stage are pre-programmed before the show, so the look extra perfect on the day.  This also means that performers can have more of an impact on the design of their show.</p>
+		<p>LED screen graphics<br><br>Custom graphics can be created for performances.  This is subject to an LED screen / projector being present.</p>
+		<button><a class="normal_a" href="https://lightningav.co.uk">Contact us</a></button>
+	</div>
+	<div></div>
+	<script>
+		var div_title_opacity = 0;
+		var div_sound_opacity = 0;
+		var div_lighting_opacity = 0;
+		var div_photography_opacity = 0;
+		var div_pre_show_opacity = 0;
+		document.getElementById("div_title").style.opacity = "0%";
+		document.getElementById("div_sound").style.opacity = "0%";
+		document.getElementById("div_lighting").style.opacity = "0%";
+		document.getElementById("div_photography").style.opacity = "0%";
+		document.getElementById("div_pre_show").style.opacity = "0%";
+		function load_transition() {
+			if (div_title_opacity < 100) {
+				div_title_opacity = div_title_opacity + 1;
+				document.getElementById("div_title").style.opacity = String(div_title_opacity) + "%";
+			};
+			if (div_title_opacity >= 100) {
+				if (div_sound_opacity < 100) {
+					div_sound_opacity = div_sound_opacity + 1;
+					document.getElementById("div_sound").style.opacity = String(div_sound_opacity) + "%";
+				};
+			};
+			if (div_sound_opacity >= 100) {
+				if (div_lighting_opacity < 100) {
+					div_lighting_opacity = div_lighting_opacity + 1;
+					document.getElementById("div_lighting").style.opacity = String(div_lighting_opacity) + "%";
+				};
+			};
+			if (div_lighting_opacity >= 100) {
+				if (div_photography_opacity < 100) {
+					div_photography_opacity = div_photography_opacity + 1;
+					document.getElementById("div_photography").style.opacity = String(div_photography_opacity) + "%";
+				};
+			};
+			if (div_photography_opacity >= 100) {
+				if (div_pre_show_opacity < 100) {
+					div_pre_show_opacity = div_pre_show_opacity + 1;
+					document.getElementById("div_pre_show").style.opacity = String(div_pre_show_opacity) + "%";
+				};
+			};
+			setTimeout(load_transition, 10);
+		};
+		load_transition()
+	</script>
+	<script>
+		if (window.innerWidth < window.innerHeight) {
+			document.getElementById("the_stylesheet").href = "vertical.css";
+			document.getElementById("background_video").height = "100%";
+		}
+	</script>
+</body>
+<footer>
+	<iframe src="bottom.html"></iframe>
+</footer>
+</html>

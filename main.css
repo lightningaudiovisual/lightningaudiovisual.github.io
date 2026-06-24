@@ -1,0 +1,110 @@
+body {
+	background-color: #262626;
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+iframe {
+	background-color: transparent;
+	width: 80%;
+	height: 300px;
+	overflow-y: hidden;
+	border: none;
+	margin-left: 10%;
+}
+
+* {
+	font-family: Franklin Gothic;
+}
+
+*::selection {
+	color: white;
+	background-color: #623ba1;
+}
+
+div {
+	margin-top: 200px;
+	width: 50%;
+	margin-left: 25%;
+}
+
+a {
+	color: white;
+	font-size: 16pt;
+	text-align: center;
+	width: 32%;
+	display: inline-block;
+	text-decoration: none;
+	cursor: hand;
+	transition-duration: 0.3s;
+}
+
+.normal_a {
+	width: auto;
+}
+
+a:hover {
+	color: #623ba1;
+}
+
+.normal_a:hover {
+	color: white;
+}
+
+button {
+	color: white;
+	background-color: #623ba1;
+	font-size: 16pt;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+	cursor: hand;
+	border: none;
+	padding: 10px;
+	min-width: 200px;
+	margin-left: 0px;
+	transition-duration: 0.3s;
+}
+
+button:hover {
+	background-color: #8658d1;
+	margin-left: 25px;
+}
+
+h1 {
+	color: #623ba1;
+	font-size: 50pt;
+	text-align: center;
+	width: 100%;
+	margin-top: 50px;
+}
+
+h2 {
+	color: white;
+	font-size: 25pt;
+	text-align: left;
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: -35px;
+}
+
+/* core image is 50% opacity w/ 100% blank layer */
+
+.h2_w_image {
+	text-align: center;
+	padding-top: 75px;
+	padding-bottom: 75px;
+	background-size: cover;
+	transition-duration: 6s;
+}
+
+.h2_w_image:hover {
+}
+
+p {
+	color: white;
+	font-size: 14pt;
+	text-align: left;
+	width: 100%;
+	margin-top: 50px;
+}

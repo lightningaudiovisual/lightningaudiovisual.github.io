@@ -1,0 +1,46 @@
+<html>
+<link rel="stylesheet" id="the_stylesheet" href="main.css">
+<title>Lightning Audio Visual</title>
+<body>
+	<video id="background_video" src="background_video.mp4" autoplay muted loop style="position: fixed; top: 0px; left: 0px; z-index: -5"></video>
+	<iframe src="top.html"></iframe>
+	<div id="div_title">
+		<h2>Get in touch</h2>
+		<p>No matter your budget, we would love to have a chat about your upcoming event!</p>
+		<p>We aim to reply within 3 business days</p>
+	</div>
+	<div id="div_contact_methods">
+		<button><a class="normal_a" href="mailto:hellolightningaudiovisual@gmail.com">Email us</a></button>
+	</div>
+	<div></div>
+	<script>
+		var div_title_opacity = 0;
+		var div_contact_methods_opacity = 0;
+		document.getElementById("div_title").style.opacity = "0%";
+		document.getElementById("div_contact_methods").style.opacity = "0%";
+		function load_transition() {
+			if (div_title_opacity < 100) {
+				div_title_opacity = div_title_opacity + 1;
+				document.getElementById("div_title").style.opacity = String(div_title_opacity) + "%";
+			};
+			if (div_title_opacity >= 100) {
+				if (div_contact_methods_opacity < 100) {
+					div_contact_methods_opacity = div_contact_methods_opacity + 1;
+					document.getElementById("div_contact_methods").style.opacity = String(div_contact_methods_opacity) + "%";
+				};
+			};
+			setTimeout(load_transition, 10);
+		};
+		load_transition()
+	</script>
+	<script>
+		if (window.innerWidth < window.innerHeight) {
+			document.getElementById("the_stylesheet").href = "vertical.css";
+			document.getElementById("background_video").height = "100%";
+		}
+	</script>
+</body>
+<footer>
+	<iframe src="bottom.html"></iframe>
+</footer>
+</html>
