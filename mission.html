@@ -1,0 +1,70 @@
+<html>
+<link rel="stylesheet" id="the_stylesheet" href="main.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Lightning Audio Visual</title>
+<body>
+	<video id="background_video" src="background_video.mp4" autoplay muted loop style="position: fixed; top: 0px; left: 0px; z-index: -5"></video>
+	<iframe src="top.html"></iframe>
+	<div id="div_title">
+		<h2 class="h2_w_image" style="background-image: url('images/lighting.png')">Our mission</h2>
+	</div>
+	<div id="div_content">
+		<h2>Our mission is to suit all budgets</h2>
+		<p>We understand that technical production can be simply too much of a cost to many event organisers and performers.  This is why our business model aims to get the most out of your budget, no matter how small it is.</p>
+	</div>
+	<div id="div_investment">
+		<h2>Continuous investment</h2>
+		<p>We are constantly expanding our inventory, which is why even the smallest of gigs allows us to invest in our equipment so your future events are even better than the last year!</p>
+	</div>
+	<div id="div_relationships">
+		<h2>Long-lasting relationships</h2>
+		<p>We aim to keep in contact with you long after the event, supporting your work in the future.</p>
+	</div>
+	<div></div>
+	<script>
+		var div_title_opacity = 0;
+		var div_content_opacity = 0;
+		var div_investment_opacity = 0;
+		var div_relationships_opacity = 0;
+		document.getElementById("div_title").style.opacity = "0%";
+		document.getElementById("div_content").style.opacity = "0%";
+		document.getElementById("div_investment").style.opacity = "0%";
+		document.getElementById("div_relationships").style.opacity = "0%";
+		function load_transition() {
+			if (div_title_opacity < 100) {
+				div_title_opacity = div_title_opacity + 1;
+				document.getElementById("div_title").style.opacity = String(div_title_opacity) + "%";
+			};
+			if (div_title_opacity >= 100) {
+				if (div_content_opacity < 100) {
+					div_content_opacity = div_content_opacity + 1;
+					document.getElementById("div_content").style.opacity = String(div_content_opacity) + "%";
+				};
+			};
+			if (div_content_opacity >= 100) {
+				if (div_investment_opacity < 100) {
+					div_investment_opacity = div_investment_opacity + 1;
+					document.getElementById("div_investment").style.opacity = String(div_investment_opacity) + "%";
+				};
+			};
+			if (div_investment_opacity >= 100) {
+				if (div_relationships_opacity < 100) {
+					div_relationships_opacity = div_relationships_opacity + 1;
+					document.getElementById("div_relationships").style.opacity = String(div_relationships_opacity) + "%";
+				};
+			};
+			setTimeout(load_transition, 10);
+		};
+		load_transition()
+	</script>
+	<script>
+		if (window.innerWidth < window.innerHeight) {
+			document.getElementById("the_stylesheet").href = "vertical.css";
+			document.getElementById("background_video").height = "100%";
+		}
+	</script>
+</body>
+<footer>
+	<iframe src="bottom.html"></iframe>
+</footer>
+</html>
