@@ -1,0 +1,39 @@
+<html>
+<link rel="stylesheet" id="the_stylesheet" href="main.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Lightning Audio Visual</title>
+<body>
+	<video id="background_video" src="background_video.mp4" autoplay muted loop style="position: fixed; top: 0px; left: 0px; z-index: -5"></video>
+	<iframe src="top.html"></iframe>
+	<div id="div_title">
+		<h2>Joke Fridays</h2>
+		<p>We release jokes which are related to the live events industry every Friday!</p>
+		<p>Our jokes:</p>
+		<p>Hover over the purple boxes for the answers</p>
+		<p><br><br>Why did the microphone break up with the speaker?</p>
+		<p class="p_joke">Because there was too much feedback!</p>
+	</div>
+	<div></div>
+	<script>
+		var div_title_opacity = 0;
+		document.getElementById("div_title").style.opacity = "0%";
+		function load_transition() {
+			if (div_title_opacity < 100) {
+				div_title_opacity = div_title_opacity + 1;
+				document.getElementById("div_title").style.opacity = String(div_title_opacity) + "%";
+			};
+			setTimeout(load_transition, 10);
+		};
+		load_transition()
+	</script>
+	<script>
+		if (window.innerWidth < window.innerHeight) {
+			document.getElementById("the_stylesheet").href = "vertical.css";
+			document.getElementById("background_video").height = "100%";
+		}
+	</script>
+</body>
+<footer>
+	<iframe src="bottom.html"></iframe>
+</footer>
+</html>

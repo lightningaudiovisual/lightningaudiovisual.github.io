@@ -109,3 +109,16 @@ p {
 	width: 100%;
 	margin-top: 50px;
 }
+
+.p_joke {
+	color: #623ba1;
+	background-color: #623ba1;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	transition-duration: 0.3s;
+}
+
+.p_joke:hover {
+	color: white;
+	background-color: transparrent;
+}
