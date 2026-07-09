@@ -3,14 +3,32 @@
 <body style="background-color: transparent">
 	<img src="images/logo_transparrent_bg.png" style="width: 25%; margin-left: 37%; margin-top: 25px"></img>
 	<div style="margin-top: 25px">
-		<a style="width: 15%" href="https://lightningav.co.uk" target="_top">Home</a>
-		<a style="width: 30%" href="https://lightningav.co.uk/services" target="_top">Our services</a>
-		<a style="width: 28%" href="https://lightningav.co.uk/contact" target="_top">Get in touch</a>
-		<a style="width: 21%" href="mailto:hellolightningaudiovisual@gmail.com">Email us</a>
+		<a id="top_table_home" style="width: 15%" href="https://lightningav.co.uk" target="_top">Home</a>
+		<a id="top_table_services" style="width: 30%" href="https://lightningav.co.uk/services" target="_top">Our services</a>
+		<a id="top_table_contact" style="width: 28%" href="https://lightningav.co.uk/contact" target="_top">Get in touch</a>
+		<a id="top_table_email" style="width: 21%" href="mailto:hellolightningaudiovisual@gmail.com">Email us</a>
+	</div>
+	<div style="margin-top: 0px">
+		<table id="socials_table" style="margin-left: 75%; width: 15%">
+			<tr style="width: 100%">
+				<td style="width: 50%"><a style="width: 100%" href="https://www.facebook.com/lightningavpeterborough" target="_blank"><img id="top_table_facebook" src="images/logo_facebook.png" style="width: 3vw; height: 3vw; padding: 10px"></img></a></td>
+				<td style="width: 50%"><a style="width: 100%" href="https://www.instagram.com/lightning_audio_visual/" target="_blank"><img id="top_table_instagram" src="images/logo_instagram.png" style="width: 3vw; height: 3vw; padding: 10px"></img></a></td>
+			</tr>
+		</table>
 	</div>
 	<script>
 		function do_thing() {
-			if (window.innerWidth < window.innerHeight) {
+			if (window.outerWidth < window.outerHeight) {
+				document.getElementById("top_table_home").style.width = "100%";
+				document.getElementById("top_table_services").style.width = "100%";
+				document.getElementById("top_table_contact").style.width = "100%";
+				document.getElementById("top_table_email").style.width = "100%";
+				document.getElementById("socials_table").style.marginLeft = "30%";
+				document.getElementById("socials_table").style.width = "40%";
+				document.getElementById("top_table_facebook").style.width = "10vw";
+				document.getElementById("top_table_facebook").style.height = "10vw";
+				document.getElementById("top_table_instagram").style.width = "10vw";
+				document.getElementById("top_table_instagram").style.height = "10vw";
 				document.getElementById("the_stylesheet").href = "vertical.css";
 			};
 		};

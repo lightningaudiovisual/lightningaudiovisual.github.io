@@ -1,0 +1,90 @@
+<html>
+<link rel="stylesheet" id="the_stylesheet" href="main.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Lightning Audio Visual</title>
+<body>
+	<video id="background_video" src="background_video.mp4" autoplay muted loop style="position: fixed; top: 0px; left: 0px; z-index: -5"></video>
+	<iframe src="top.html"></iframe>
+	<div id="div_title">
+		<h2>Our packages</h2>
+		<p>We offer a range of services to suit your needs.<br><br>Got a question?</p>
+		<button><a class="normal_a" href="https://lightningav.co.uk/contact">Contact us</a></button>
+	</div>
+	<div id="div_bronze">
+		<h2 class="h2_w_image" style="background-image: url('images/bronze.png')">Bronze</h2>
+		<p style="font-size: 32pt">£215*</p>
+		<h2>What's included?</h2>
+		<table>
+			<tr>
+				<td><p class="square" style="background-image: url('images/lighting.png')">Basic lighting</p></td>
+				<td><p class="square" style="background-image: url('images/photographer.png')">Photography</p></td>
+				<td><p class="square" style="background-image: url('images/sound.png')">Basic PA system</p></td>
+			</tr>
+			<tr>
+				<td><p class="square" style="background-image: url('images/muzza.png'); margin-top: 0px">All-day crew</p></td>
+			</tr>
+		</table>
+		<p><u>Images:</u></p>
+		<img src="images/bronze_viz_1.png" class="img_package"></img>
+		<img src="images/bronze_viz_2.png" class="img_package_2"></img>
+		<img src="images/bronze_viz_3.png" class="img_package_2"></img>
+		<img src="images/bronze_viz_1.png" class="img_package"></img>
+		<p>*Price does not include items such as travel expenses and does not represent the final price.  Price is for one day.</p>
+	</div>
+	<div id="div_silver">
+		<h2 class="h2_w_image" style="background-image: url('images/silver.png')">Silver</h2>
+		<p style="font-size: 32pt">Coming soon</p>
+	</div>
+	<div id="div_gold">
+		<h2 class="h2_w_image" style="background-image: url('images/gold.png')">Gold</h2>
+		<p style="font-size: 32pt">Coming soon</p>
+	</div>
+	</div>
+	<div></div>
+	<script>
+		var div_title_opacity = 0;
+		var div_bronze_opacity = 0;
+		var div_silver_opacity = 0;
+		var div_gold_opacity = 0;
+		document.getElementById("div_title").style.opacity = "0%";
+		document.getElementById("div_bronze").style.opacity = "0%";
+		document.getElementById("div_silver").style.opacity = "0%";
+		document.getElementById("div_gold").style.opacity = "0%";
+		function load_transition() {
+			if (div_title_opacity < 100) {
+				div_title_opacity = div_title_opacity + 1;
+				document.getElementById("div_title").style.opacity = String(div_title_opacity) + "%";
+			};
+			if (div_title_opacity >= 100) {
+				if (div_bronze_opacity < 100) {
+					div_bronze_opacity = div_bronze_opacity + 1;
+					document.getElementById("div_bronze").style.opacity = String(div_bronze_opacity) + "%";
+				};
+			};
+			if (div_bronze_opacity >= 100) {
+				if (div_silver_opacity < 100) {
+					div_silver_opacity = div_silver_opacity + 1;
+					document.getElementById("div_silver").style.opacity = String(div_silver_opacity) + "%";
+				};
+			};
+			if (div_silver_opacity >= 100) {
+				if (div_gold_opacity < 100) {
+					div_gold_opacity = div_gold_opacity + 1;
+					document.getElementById("div_gold").style.opacity = String(div_gold_opacity) + "%";
+				};
+			};
+			setTimeout(load_transition, 10);
+		};
+		load_transition()
+	</script>
+	<script>
+		if (window.innerWidth < window.innerHeight) {
+			document.getElementById("the_stylesheet").href = "vertical.css";
+			document.getElementById("background_video").height = "100%";
+		}
+	</script>
+</body>
+<footer>
+	<iframe src="bottom.html"></iframe>
+</footer>
+</html>

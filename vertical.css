@@ -7,7 +7,7 @@ body {
 iframe {
 	background-color: transparent;
 	width: 100%;
-	height: 600px;
+	height: 800px;
 	overflow-y: hidden;
 	border: none;
 }
@@ -22,14 +22,14 @@ iframe {
 }
 
 div {
-	margin-top: 200px;
+	margin-top: 500px;
 	width: 90%;
 	margin-left: 5%;
 }
 
 a {
 	color: white;
-	font-size: 35pt;
+	font-size: 40pt;
 	text-align: center;
 	width: 100%;
 	margin: auto;
@@ -54,15 +54,16 @@ a:hover {
 button {
 	color: white;
 	background-color: #623ba1;
-	font-size: 35pt;
+	font-size: 40pt;
 	text-align: center;
-	display: inline-block;
 	text-decoration: none;
 	cursor: hand;
 	border: none;
 	padding: 25px;
 	min-width: 200px;
 	margin-left: 0px;
+	width: 100%;
+	padding-top: 75px;
 }
 
 button:hover {
@@ -92,8 +93,14 @@ h2 {
 	text-align: center;
 	padding-top: 75px;
 	padding-bottom: 75px;
-	background-repeat: no-repeat;
-	background-size: contain;
+	background-repeat: none;
+	background-size: cover;
+}
+
+.img_body {
+	padding-top: 75px;
+	padding-bottom: 75px;
+	min-height: 100vh;
 }
 
 p {
@@ -114,4 +121,37 @@ p {
 .p_joke:hover {
 	color: white;
 	background-color: transparrent;
+}
+
+.square {
+	text-shadow: 0px 0px 5px black;
+	background-color: #623ba1;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+	width: 29vw;
+	height: 29vw;
+	scale: .95;
+	opacity: 0.8;
+	background-size: cover;
+	transition-duration: 0.3s;
+}
+
+.square:hover {
+	opacity: 1;
+	scale: 1;
+}
+
+.img_package {
+	width: 100%;
+	margin-bottom: 50px;
+	height: 500px;
+	object-fit: cover;
+}
+
+.img_package_2 {
+	width: 100%;
+	margin-bottom: 50px;
+	height: 500px;
+	object-fit: cover;
 }

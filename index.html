@@ -6,7 +6,7 @@
 	<video id="background_video" src="background_video.mp4" autoplay muted loop style="position: fixed; top: 0px; left: 0px; z-index: -5"></video>
 	<iframe src="top.html"></iframe>
 	<div id="div_title">
-		<h2 class="h2_w_image" style="background-image: url('images/chamsys.png')">Welcome to Lightning Audio Visual</h2>
+		<h1>Welcome to Lightning Audio Visual</h1>
 	</div>
 	<div id="div_fast">
 		<h2>Fast, efficient, reliable</h2>
@@ -24,16 +24,6 @@
 		<h2 style="color: #8658d1; text-align: center"><i>"Wow that looks so cool!"</i></h2>
 		<p style="text-align: right">- Karin Adcock piano school</p>
 	</div>
-	<div id="div_safety">
-		<h2>Safety is paramount</h2>
-		<p>Safety is at the forefront of everything that we do.  This is why we always strive to implement our training at every point in our process.</p>
-		<button><a class="normal_a" href="https://lightningav.co.uk">Contact us</a></button>
-	</div>
-	<div id="div_seemless">
-		<h2>Seemless integration</h2>
-		<p>Our crew members are experienced in their fields and excellent at what they do.<br><br>They aim to be as accessible as possible for your questions and ideas, so let them know!</p>
-		<h2 class="h2_w_image" style="background-image: url('images/muzza.png'); background-position-y: -300px; height: 200px; margin-bottom: 25px"></h2>
-	</div>
 	<div></div>
 	<script>
 		var div_title_opacity = 0;
@@ -47,8 +37,6 @@
 		document.getElementById("div_fast").style.opacity = "0%";
 		document.getElementById("div_where").style.opacity = "0%";
 		document.getElementById("div_testimonials").style.opacity = "0%";
-		document.getElementById("div_safety").style.opacity = "0%";
-		document.getElementById("div_seemless").style.opacity = "0%";
 		function load_transition() {
 			if (div_title_opacity < 100) {
 				div_title_opacity = div_title_opacity + 1;
@@ -70,18 +58,6 @@
 				if (div_testimonials_opacity < 100) {
 					div_testimonials_opacity = div_testimonials_opacity + 1;
 					document.getElementById("div_testimonials").style.opacity = String(div_testimonials_opacity) + "%";
-				};
-			};
-			if (div_testimonials_opacity >= 100) {
-				if (div_safety_opacity < 100) {
-					div_safety_opacity = div_safety_opacity + 1;
-					document.getElementById("div_safety").style.opacity = String(div_safety_opacity) + "%";
-				};
-			};
-			if (div_safety_opacity >= 100) {
-				if (div_seemless_opacity < 100) {
-					div_seemless_opacity = div_seemless_opacity + 1;
-					document.getElementById("div_seemless").style.opacity = String(div_seemless_opacity) + "%";
 				};
 			};
 			setTimeout(load_transition, 10);

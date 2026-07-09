@@ -1,17 +1,24 @@
 <html>
 <link rel="stylesheet" id="the_stylesheet" href="main.css">
 <body style="background-color: transparent">
-	<div>
+	<div style="margin-top: 0px">
 		<p style="color: #623ba1; text-align: center">Lightning Audio Visual 2026</p>
-		<a style="width: 15%" href="https://lightningav.co.uk" target="_top">Home</a>
-		<a style="width: 30%" href="https://lightningav.co.uk/services" target="_top">Our services</a>
-		<a style="width: 28%" href="https://lightningav.co.uk/contact" target="_top">Get in touch</a>
-		<a style="width: 21%" href="mailto:hellolightningaudiovisual@gmail.com">Email us</a>
+		<a id="top_table_home" style="width: 15%" href="https://lightningav.co.uk" target="_top">Home</a>
+		<a id="top_table_services" style="width: 30%" href="https://lightningav.co.uk/services" target="_top">Our services</a>
+		<a id="top_table_contact" style="width: 28%" href="https://lightningav.co.uk/contact" target="_top">Get in touch</a>
+		<a id="top_table_email" style="width: 21%" href="mailto:hellolightningaudiovisual@gmail.com">Email us</a>
 	</div>
 	<script>
-		if (window.innerWidth < window.innerHeight) {
-			document.getElementById("the_stylesheet").href = "vertical.css";
-		}
+		function do_thing() {
+			if (window.outerWidth < window.outerHeight) {
+				document.getElementById("top_table_home").style.width = "100%";
+				document.getElementById("top_table_services").style.width = "100%";
+				document.getElementById("top_table_contact").style.width = "100%";
+				document.getElementById("top_table_email").style.width = "100%";
+				document.getElementById("the_stylesheet").href = "vertical.css";
+			};
+		};
+		setTimeout(do_thing, 100);
 	</script>
 </body>
 </html>
