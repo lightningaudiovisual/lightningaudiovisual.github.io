@@ -1,7 +1,7 @@
 body {
 	background-color: #262626;
 	margin: 0px;
-	overflow-x: hidden;
+	overflow-x: scroll;
 }
 
 iframe {
