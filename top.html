@@ -1,39 +1,21 @@
 <html>
-<link rel="stylesheet" id="the_stylesheet" href="main.css">
-<body style="background-color: transparent">
-	<h1 style="color: white; background-color: #623ba1; font-family: Arial; font-size: 16pt; font-weight: 100; margin-left: 25%; width: 50%; margin-top: 10px"><i>New website coming soon!</i></h1>
-	<img src="images/logo_transparrent_bg.png" style="width: 25%; margin-left: 37%; margin-top: 25px"></img>
-	<div style="margin-top: 25px">
-		<a id="top_table_home" style="width: 15%" href="https://lightningav.co.uk" target="_top">Home</a>
-		<a id="top_table_services" style="width: 30%" href="https://lightningav.co.uk/services" target="_top">Our services</a>
-		<a id="top_table_contact" style="width: 28%" href="https://lightningav.co.uk/contact" target="_top">Get in touch</a>
-		<a id="top_table_email" style="width: 21%" href="mailto:hellolightningaudiovisual@gmail.com">Email us</a>
-	</div>
-	<div style="margin-top: 0px">
-		<table id="socials_table" style="margin-left: 75%; width: 15%">
-			<tr style="width: 100%">
-				<td style="width: 50%"><a style="width: 100%" href="https://www.facebook.com/lightningavpeterborough" target="_blank"><img id="top_table_facebook" src="images/logo_facebook.png" style="width: 3vw; height: 3vw; padding: 10px"></img></a></td>
-				<td style="width: 50%"><a style="width: 100%" href="https://www.instagram.com/lightning_audio_visual/" target="_blank"><img id="top_table_instagram" src="images/logo_instagram.png" style="width: 3vw; height: 3vw; padding: 10px"></img></a></td>
-			</tr>
-		</table>
-	</div>
+<link id="the_stylesheet" rel="stylesheet" href="main.css">
+<body style="overflow-y: hidden">
+	<image src="images/logo.png" style="height: 60%; margin-top: -5px"></image>
+	<a id="h_contact" class="a_top" href="https://lightningav.co.uk/" target="_top">Contact us</a>
+	<a id="h_services" class="a_top" href="https://lightningav.co.uk/" target="_top">Services</a>
+	<a id="h_about" class="a_top" href="https://lightningav.co.uk/" target="_top">About</a>
+	<a id="h_home" class="a_top" href="https://lightningav.co.uk/" target="_top">Home</a>
+	<a id="burger" href="https://lightningav.co.uk/burger" target="_top" style="font-family: Segoe UI; font-size: 30pt; visibility: hidden; position: absolute; top: 0px; left: 80vw; min-width: 100px; padding: 20px; padding-left: 20px; padding-right: 20px">&#9776</a>
 	<script>
-		function do_thing() {
-			if (window.outerWidth < window.outerHeight) {
-				document.getElementById("top_table_home").style.width = "100%";
-				document.getElementById("top_table_services").style.width = "100%";
-				document.getElementById("top_table_contact").style.width = "100%";
-				document.getElementById("top_table_email").style.width = "100%";
-				document.getElementById("socials_table").style.marginLeft = "30%";
-				document.getElementById("socials_table").style.width = "40%";
-				document.getElementById("top_table_facebook").style.width = "10vw";
-				document.getElementById("top_table_facebook").style.height = "10vw";
-				document.getElementById("top_table_instagram").style.width = "10vw";
-				document.getElementById("top_table_instagram").style.height = "10vw";
-				document.getElementById("the_stylesheet").href = "vertical.css";
-			};
-		};
-		setTimeout(do_thing, 100);
+		if (window.outerWidth < window.outerHeight) {
+			document.getElementById("the_stylesheet").href = "vertical.css";
+			document.getElementById("h_contact").style.visibility = "hidden";
+			document.getElementById("h_services").style.visibility = "hidden";
+			document.getElementById("h_about").style.visibility = "hidden";
+			document.getElementById("h_home").style.visibility = "hidden";
+			document.getElementById("burger").style.visibility = "visible";
+		}
 	</script>
 </body>
 </html>

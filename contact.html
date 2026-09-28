@@ -1,49 +1,25 @@
 <html>
-<link rel="stylesheet" id="the_stylesheet" href="main.css">
+<link id="the_stylesheet" rel="stylesheet" href="main.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <title>Lightning Audio Visual</title>
 <body>
 	<iframe src="top.html"></iframe>
-	<div id="div_title">
-		<h2>Get in touch</h2>
-		<p>We would love to have a chat about your upcoming event!</p>
-		<p>We aim to reply within three business days</p>
-		<p>Our email: hellolightningaudiovisual@gmail.com<br>(You can click the button below)</p>
-	</div>
-	<div id="div_contact_methods">
-		<button><a class="normal_a" href="mailto:hellolightningaudiovisual@gmail.com">Email us</a></button>
-		<button><a class="normal_a" href="https://www.facebook.com/lightningavpeterborough" target="_blank">Message us</a></button>
-		<button><a class="normal_a" href="https://docs.google.com/forms/d/e/1FAIpQLSd_lykUScC2H9qWl9J6Y17OH8YUmXTDD_Kw9O27xrsl8GRFiQ/viewform?usp=publish-editor" target="_blank">Use the form</a></button>
+	<div>
+		<h1>Contact us</h1>
+		<h2>We would love to hear from you!</h2>
+		<p>Email: hellolightningaudiovisual@gmail.com</p>
+		<a class="a_left" href="https://www.instagram.com/lightning_audio_visual/" target="_blank" style="width: 50px; margin-left: 10%; padding-left: 0px; padding-right: 0px; border: none; display: inline-block; float: left"><image src="images/instagram.png" style="width: 50px"></image></a>
+		<a class="a_left" href="https://www.facebook.com/lightningavpeterborough" target="_blank" style="width: 50px; margin-left: -30px; padding-left: 0px; padding-right: 0px; border: none; display: inline-block; float: left"><image src="images/facebook.png" style="width: 50px"></image></a>
+		<a class="a_left" href="https://uk.pinterest.com/lightningav/" target="_blank" style="width: 50px; margin-left: -30px; padding-left: 0px; padding-right: 0px; border: none; display: inline-block; float: left"><image src="images/pinterest.png" style="width: 50px"></image></a>
 	</div>
 	<div></div>
-	<script>
-		var div_title_opacity = 0;
-		var div_contact_methods_opacity = 0;
-		document.getElementById("div_title").style.opacity = "0%";
-		document.getElementById("div_contact_methods").style.opacity = "0%";
-		function load_transition() {
-			if (div_title_opacity < 100) {
-				div_title_opacity = div_title_opacity + 1;
-				document.getElementById("div_title").style.opacity = String(div_title_opacity) + "%";
-			};
-			if (div_title_opacity >= 100) {
-				if (div_contact_methods_opacity < 100) {
-					div_contact_methods_opacity = div_contact_methods_opacity + 1;
-					document.getElementById("div_contact_methods").style.opacity = String(div_contact_methods_opacity) + "%";
-				};
-			};
-			setTimeout(load_transition, 10);
-		};
-		load_transition()
-	</script>
+	<div>
+		<p>Lightning Audio Visual 2026</p>
+	</div>
 	<script>
 		if (window.innerWidth < window.innerHeight) {
 			document.getElementById("the_stylesheet").href = "vertical.css";
-			document.getElementById("background_video").height = "100%";
 		}
 	</script>
 </body>
-<footer>
-	<iframe src="bottom.html"></iframe>
-</footer>
 </html>
