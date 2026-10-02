@@ -1,0 +1,43 @@
+<html>
+<link id="the_stylesheet" rel="stylesheet" href="main.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Lightning Audio Visual</title>
+<body>
+	<iframe src="top.html"></iframe>
+	<div>
+		<h1>About us</h1>
+		<h2>Our mission</h2>
+		<p>Our mission is to grow a dedicated, experienced and enthusiastic crew in order to create an ecstatic experience for all.</p>
+	</div>
+	<div class="alternate">
+		<h2>Meet the team</h2>
+		<div id="card_murray" class="card card_left" style="min-height: 500; max-height: 501px"><image class="card_image" src="images/murray.jpeg"></image><p id="murray_p" class="card_p" style="text-align: center; margin-top: -30px"><b id="murray_b" style="font-size: 18pt">Murray Galbraith</b><br><br>CEO<br><br><i>'I have a number of years experience in the industry, particularly in lighting and have a real passion for it.  I am also currently studying Live Events Production at the Academy of Live Technology, which is located at the heart of the industry in the UK.'</i></p></div>
+		<div id="card_austin" class="card" style="min-height: 500; max-height: 501px"><image class="card_image" src="images/austin_new.jpeg"></image><p id="austin_p" class="card_p" style="text-align: center; margin-top: -30px"><b id="austin_b" style="font-size: 18pt">Austin Galbraith</b><br><br>COO<br><br><i>'I have great feet'</i></p></div>
+		<p>We are genuinely passionate about our industry, which is why we love what we do.</p>
+		<h2>Are you interested in working with us?</h2>
+		<a href="https://lightningav.co.uk/crew">Click here!</a>
+	</div>
+	<div style="visibility: hidden">
+		<h2>Frequently asked questions</h2>
+		<p>Q.  This is an example of a question<br>A.  This is an example of an answer</p>
+		<p>Q.  This is an example of a question<br>A.  This is an example of an answer</p>
+		<p>Q.  This is an example of a question<br>A.  This is an example of an answer</p>
+	</div>
+	<div>
+		<p>Lightning Audio Visual 2026</p>
+	</div>
+	<script>
+		if (window.innerWidth < window.innerHeight) {
+			document.getElementById("the_stylesheet").href = "vertical.css";
+			document.getElementById("card_murray").style.minHeight = "850px";
+			document.getElementById("card_murray").style.maxHeight = "851px";
+			document.getElementById("murray_b").style.fontSize = "32pt";
+			document.getElementById("murray_p").style.marginTop = "0px";
+			document.getElementById("card_austin").style.minHeight = "850px";
+			document.getElementById("card_austin").style.maxHeight = "851px";
+			document.getElementById("austin_b").style.fontSize = "32pt";
+			document.getElementById("austin_p").style.marginTop = "0px";
+		}
+	</script>
+</body>
+</html>
